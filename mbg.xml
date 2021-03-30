@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+	<context id="DB2Tables" targetRuntime="MyBatis3">
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+		<!-- 配置数据库连接 -->
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost:3306/AgriculturalSales" userId="root"
+			password="root">
+		</jdbcConnection>
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<!-- 指定javaBean生成的位置 -->
+		<javaModelGenerator targetPackage="com.AgriculturalSales.bean"
+			targetProject=".\src\main\java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<!--指定sql映射文件生成的位置 -->
+		<sqlMapGenerator targetPackage="mapper" targetProject=".\src\main\resources">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+		<!-- 指定dao接口生成的位置，mapper接口 -->
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="com.AgriculturalSales.dao" targetProject=".\src\main\java">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+
+		<!-- table指定每个表的生成策略 -->
+<!--		<table tableName="admin_tbl" domainObjectName="Admin"></table>-->
+<!--		<table tableName="user_tbl" domainObjectName="User"></table>-->
+<!--		<table tableName="product_tbl" domainObjectName="Product"></table>-->
+<!--		<table tableName="kind1_tbl" domainObjectName="Kind1"></table>-->
+<!--		<table tableName="kind2_tbl" domainObjectName="Kind2"></table>-->
+<!--		<table tableName="kind3_tbl" domainObjectName="Kind3"></table>-->
+<!--		<table tableName="cart_tbl" domainObjectName="Cart"></table>-->
+<!--		<table tableName="order_tbl" domainObjectName="Order"></table>-->
+<!--		<table tableName="order_item_tbl" domainObjectName="OrderItem"></table>-->
+<!--		<table tableName="address_tbl" domainObjectName="Address"></table>-->
+<!--		<table tableName="areas" domainObjectName="Areas"></table>-->
+<!--		<table tableName="cities" domainObjectName="Cities"></table>-->
+<!--		<table tableName="provinces" domainObjectName="Provinces"></table>-->
+<!--		<table tableName="evaluation_tbl" domainObjectName="Evaluation"></table>-->
+<!--		<table tableName="reply_tbl" domainObjectName="Reply"></table>-->
+<!--		<table tableName="sales_rally_tbl" domainObjectName="SalesRally"></table>-->
+<!--		<table tableName="kind_sales_tbl" domainObjectName="KindSales"></table>-->
+<!--		<table tableName="edit_tbl" domainObjectName="Edit"></table>-->
+		<table tableName="product_new_tbl" domainObjectName="NewProduct"></table>
+	</context>
+</generatorConfiguration>
